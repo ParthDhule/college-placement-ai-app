@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         cream: '#bae6fd',
         navy: '#0c4a6e',
-        blue: '#0ea5e9',
+        blue: '#7dd2fa',
         red: '#2b007a',
         maroon: '#10047a',
       },
