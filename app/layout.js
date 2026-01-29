@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'PlaceAI - AI-Powered Placement Platform',
+  title: 'Talent Track - AI-Powered Placement Platform',
   description: 'AI-powered college placement platform connecting students, recruiters, and TPOs',
 }
 

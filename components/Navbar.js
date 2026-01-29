@@ -23,7 +23,7 @@ export default function Navbar({ userRole, userName }) {
     <nav className="bg-maroon text-cream p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <h1 className="text-xl font-bold">PlaceAI</h1>
+          <h1 className="text-xl font-bold">Talent Track</h1>
           {userName && (
             <span className="text-sm opacity-90">Welcome, {userName}</span>
           )}
