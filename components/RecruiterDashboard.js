@@ -20,10 +20,6 @@ export default function RecruiterDashboard() {
   const router = useRouter()
   const supabase = createClient()
 
-  useEffect(() => {
-    loadData()
-  }, [])
-
   const loadData = async () => {
     try {
       const { data: { user } } = await supabase.auth.getUser()
@@ -79,6 +75,11 @@ export default function RecruiterDashboard() {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    loadData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleCreateJob = async (e) => {
     e.preventDefault()

@@ -15,11 +15,6 @@ export default function ApplyPage() {
   const [scoring, setScoring] = useState(false)
   const [result, setResult] = useState(null)
 
-  useEffect(() => {
-    loadJob()
-    loadResume()
-  }, [])
-
   const loadJob = async () => {
     try {
       const { data, error } = await supabase
@@ -76,6 +71,12 @@ export default function ApplyPage() {
       console.error('Error loading resume:', error)
     }
   }
+
+  useEffect(() => {
+    loadJob()
+    loadResume()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.jobId])
 
   const handleScoreResume = async () => {
     if (!resumeText) {
