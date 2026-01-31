@@ -28,10 +28,36 @@ export async function POST(request) {
     // Extract text from PDF
     const resumeText = await extractTextFromPDF(file)
 
+    // Check if bucket exists first
+    const { data: buckets, error: bucketError } = await supabase.storage.listBuckets()
+    
+    if (bucketError) {
+      console.error('Error listing buckets:', bucketError)
+      return NextResponse.json(
+        { 
+          error: 'Failed to access storage. Please ensure the bucket is created.',
+          details: bucketError.message
+        },
+        { status: 500 }
+      )
+    }
+
+    const resumesBucket = buckets?.find(bucket => bucket.id === 'resumes')
+    
+    if (!resumesBucket) {
+      return NextResponse.json(
+        { 
+          error: 'Bucket "resumes" not found. Please create it in Supabase Dashboard > Storage.',
+          instructions: 'Go to Supabase Dashboard > Storage > Create a new bucket named "resumes" (public, 5MB limit)'
+        },
+        { status: 404 }
+      )
+    }
+
     // Upload file to Supabase Storage
     const fileExt = file.name.split('.').pop()
-    const fileName = `${user.id}-${Date.now()}.${fileExt}`
-    const filePath = `resumes/${fileName}`
+    const fileName = `${Date.now()}.${fileExt}`
+    const filePath = `${user.id}/${fileName}`
 
     const { error: uploadError } = await supabase.storage
       .from('resumes')
@@ -41,7 +67,14 @@ export async function POST(request) {
       })
 
     if (uploadError) {
-      throw uploadError
+      console.error('Upload error:', uploadError)
+      return NextResponse.json(
+        { 
+          error: uploadError.message || 'Failed to upload file',
+          details: uploadError
+        },
+        { status: 500 }
+      )
     }
 
     // Get public URL
