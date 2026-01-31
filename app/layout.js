@@ -12,7 +12,7 @@ export const metadata = {
 export const metadata = {
   title: "College Placement AI",
   icons: {
-    icon: "/favicon.ico",
+    icon: "static/favicon.ico",
   },
 };
 
