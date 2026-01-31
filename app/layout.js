@@ -9,6 +9,13 @@ export const metadata = {
   description: 'AI-powered college placement platform connecting students, recruiters, and TPOs',
 }
 
+export const metadata = {
+  title: "College Placement AI",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
