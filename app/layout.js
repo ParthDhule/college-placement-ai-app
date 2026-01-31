@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Talent Track - AI-Powered Placement Platform',
   description: 'AI-powered college placement platform connecting students, recruiters, and TPOs',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({ children }) {
