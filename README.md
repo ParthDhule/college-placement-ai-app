@@ -1,5 +1,7 @@
 # PlaceAI MVP - AI-Powered Placement Platform
 
+**Built with Firebase Studio**
+
 A Next.js application for college placement management with AI-powered resume scoring and feedback generation.
 
 ## Features
