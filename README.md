@@ -1,16 +1,16 @@
-# PlaceAI MVP - AI-Powered Placement Platform
+# 🚀 Talent Track - AI-Powered Placement Management Platform
 
-**Built with Firebase Studio / Vibe Coded App**
+**Built with Firebase Studio 🔥 / Vibe Coded App 🧩 **
 
-A Next.js application for college placement management with AI-powered resume scoring and feedback generation.
+A Next.js application for college placement management with AI-powered resume scoring and feedback generation.🏆
 
-## Features
+## Features ✨
 
 - **Student Dashboard**: Upload resume, view applications, and see match scores
 - **Recruiter Dashboard**: Post jobs, review applications, and generate AI feedback
 - **TPO Dashboard**: Analytics, skill gap analysis, and placement readiness metrics
 
-## Tech Stack
+## Tech Stack ⚙
 
 - Next.js 14 (App Router) with JavaScript
 - Supabase (Auth + PostgreSQL Database)
@@ -18,7 +18,7 @@ A Next.js application for college placement management with AI-powered resume sc
 - Tailwind CSS for styling
 - Recharts for analytics
 
-## Setup
+## Setup 🛠
 
 1. Install dependencies:
 ```bash
@@ -43,7 +43,7 @@ Fill in your Supabase and Gemini API credentials.
 npm run dev
 ```
 
-## Database Schema
+## Database Schema 🔐
 
 See the plan document for the complete database schema. The main tables are:
 - `profiles` - User profiles with roles
@@ -51,13 +51,13 @@ See the plan document for the complete database schema. The main tables are:
 - `job_postings` - Job listings
 - `applications` - Application records with AI scores
 
-## Environment Variables
+## Environment Variables 🔐
 
 - `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous key
 - `NEXT_PUBLIC_GEMINI_API_KEY` - Your Google Gemini API key
 
-## Project Structure
+## Project Structure 🏛
 
 ```
 app/
