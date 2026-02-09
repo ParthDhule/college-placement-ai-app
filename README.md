@@ -1,6 +1,6 @@
 # 🚀 Talent Track - AI-Powered Placement Management Platform
 
-**Built with Firebase Studio 🔥 / Vibe Coded App 🧩 **
+**Built with Firebase Studio 🔥 / Vibe Coded App 🧩**
 
 A Next.js application for college placement management with AI-powered resume scoring and feedback generation.🏆
 
