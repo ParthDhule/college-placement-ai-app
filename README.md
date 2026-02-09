@@ -13,7 +13,7 @@ A Next.js application for college placement management with AI-powered resume sc
 ## Tech Stack ⚙
 
 - Next.js 14 (App Router) with JavaScript
-- Supabase (Auth + PostgreSQL Database)
+- Supabase (Auth + Database)
 - Google Gemini API for AI features
 - Tailwind CSS for styling
 - Recharts for analytics
